@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/bitrix/templates/gos_modern_red_s2/favicon.png">
+    <link href="/bitrix/templates/gos_modern_red_s2/css/all.css" rel="stylesheet">
+	<script data-skip-moving="true">
+		function loadFont(t,e,n,o){function a(){if(!window.FontFace)return!1;var t=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{}),e=t.load();try{e.then(null,function(){})}catch(n){}return"loading"===t.status}var r=navigator.userAgent,s=!window.addEventListener||r.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!r.match(/Chrome/);if(!s){var i={};try{i=localStorage||{}}catch(c){}var d="x-font-"+t,l=d+"url",u=d+"css",f=i[l],h=i[u],p=document.createElement("style");if(p.rel="stylesheet",document.head.appendChild(p),!h||f!==e&&f!==n){var w=n&&a()?n:e,m=new XMLHttpRequest;m.open("GET",w),m.onload=function(){m.status>=200&&m.status<400&&(i[l]=w,i[u]=m.responseText,o||(p.textContent=m.responseText))},m.send()}else p.textContent=h}}
+
+		loadFont('OpenSans', '/bitrix/templates/gos_modern_red_s2/opensans.css', '/bitrix/templates/gos_modern_red_s2/opensans-woff2.css');
+	</script>
+<!--script src="http://api-maps.yandex.ru/2.1.63/?lang=ru_RU" type="text/javascript"></script -->
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script src="https://yandex.st/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.min.css?169906351822029" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?16990617662320" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.min.css?169906414526598" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s2/gos_modern_red_s2/template_bcbd7cf158df6cb50a55b094d774f0d9/template_bcbd7cf158df6cb50a55b094d774f0d9_v1.css?1703044840191374" type="text/css"  data-template-style="true" rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.min.js?1703044492221146"></script>
+
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script type="text/javascript">(window.BX||top.BX).message({'pull_server_enabled':'N','pull_config_timestamp':'0','pull_guest_mode':'N','pull_guest_user_id':'0'});(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'25200','UTF_MODE':'Y','SITE_ID':'s2','SITE_DIR':'/ms/','USER_ID':'','SERVER_TIME':'1721144702','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'c7918f55e2eadd6582e7369d480015ee'});</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s2/gos_modern_red_s2/kernel_main/kernel_main_v1.js?1705656503154480"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.min.js?16564133217365"></script>
+<script type="text/javascript" src="/bitrix/js/pull/protobuf/protobuf.min.js?166122226676433"></script>
+<script type="text/javascript" src="/bitrix/js/pull/protobuf/model.min.js?166122226614190"></script>
+<script type="text/javascript" src="/bitrix/js/rest/client/rest.client.min.js?16612223779240"></script>
+<script type="text/javascript" src="/bitrix/js/pull/client/pull.client.min.js?169907187147780"></script>
+<script type="text/javascript" src="/bitrix/js/main/popup/dist/main.popup.bundle.min.js?170304457765711"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/session.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/date/main.date.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/pageobject/pageobject.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/utils.js','/bitrix/templates/gos_modern_red_s2/js/-jquery.min.js','/bitrix/templates/gos_modern_red_s2/js/js.cookie.min.js','/bitrix/templates/gos_modern_red_s2/js/jquery.formstyler.min.js','/bitrix/templates/gos_modern_red_s2/js/jquery.matchHeight-min.js','/bitrix/templates/gos_modern_red_s2/js/jquery.mobileNav.min.js','/bitrix/templates/gos_modern_red_s2/js/jquery.tabsToSelect.min.js','/bitrix/templates/gos_modern_red_s2/js/jquery.maskedinput.js','/bitrix/templates/gos_modern_red_s2/js/owl.carousel.min.js','/bitrix/templates/gos_modern_red_s2/js/perfect-scrollbar.jquery.min.js','/bitrix/templates/gos_modern_red_s2/js/responsive-tables.js','/bitrix/templates/gos_modern_red_s2/js/special_version.js','/bitrix/templates/gos_modern_red_s2/js/main.js']);</script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/templates/gos_modern_red_s2/special_version.css','/bitrix/templates/gos_modern_red_s2/styles.css','/bitrix/templates/gos_modern_red_s2/template_styles.css']);</script>
+<script type="text/javascript">
+bxSession.Expand('c7918f55e2eadd6582e7369d480015ee.d8c325d505ce0a21308a1cd0a94c5151c511cfeb905b07467e0949d1500654f1');
+</script>
+<script type="text/javascript">
+					(function () {
+						"use strict";
+
+						var counter = function ()
+						{
+							var cookie = (function (name) {
+								var parts = ("; " + document.cookie).split("; " + name + "=");
+								if (parts.length == 2) {
+									try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+									catch (e) {}
+								}
+							})("BITRIX_CONVERSION_CONTEXT_s2");
+
+							if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+								return;
+
+							var request = new XMLHttpRequest();
+							request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+							request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+							request.send(
+								"SITE_ID="+encodeURIComponent("s2")+
+								"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+								"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+							);
+						};
+
+						if (window.frameRequestStart === true)
+							BX.addCustomEvent("onFrameDataReceived", counter);
+						else
+							BX.ready(counter);
+					})();
+				</script>
+
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s2/gos_modern_red_s2/template_5d67d0208d93fe518999c01380ce1db7/template_5d67d0208d93fe518999c01380ce1db7_v1.js?1703044840212490"></script>
+
+<style type="text/css">
+ul.pixel-tabs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 340px;
+	overflow: visible;
+}
+ul.pixel-tabs li {
+	display: inline-block;
+	line-height: 30px;
+	border: 1px solid #CCC;
+	border-bottom: 0 none;
+}
+ul.pixel-tabs li a.tab {
+	border-bottom: 0px solid #CCC;
+	background-color:#a42338;
+	color:#FFF;
+	font-weight:normal;
+	height: 28px;
+}
+ul.pixel-tabs li a {
+	color: #666;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0px 12px;
+	white-space: nowrap;
+}
+ul.pixel-tabs li a:hover {
+	border-bottom: none;
+}
+ul.pixel-tabs li a.active-tab {
+	background: #fff;
+    color:#a42338;
+    font-weight:normal;
+    border-bottom: 0 none;
+}
+.content-tab {
+	border: 1px solid #CCC;
+	margin: -1px 0 0 0;
+	padding: 20px;
+    overflow-y: auto;
+    height: 280px;
+}
+div.tabs {
+	height: 340px;
+	overflow: hidden;
+}
+.notebook {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.notebook > input {
+    display: none;
+}
+
+.notebook > input + label {
+    display: inline-block;
+    border: 1px solid #ccc;
+	background-color:#a42338;
+	color: #ffffff;
+    padding: 4px 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.notebook > input + label:not(:last-of-type) {
+    color: #ffffff;
+}
+/*
+.notebook > input + label:hover {
+    color: blue;
+}
+*/
+.notebook > input + label:last-of-type::after {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    width: 2000px;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 100%;
+}
+
+.notebook > input:checked + label {
+    color: #a42338;
+	background-color:#ffffff;
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.notebook > input:checked + label:last-of-type::after {
+    bottom: 0px;
+	color: #ffffff;
+}
+.notebook > div {
+    white-space: normal;
+    display: none;
+    border: 1px solid #ccc;
+    /*border-top: none;*/
+    margin: 0px;
+	margin-top: -1px;
+    padding: 2px 20px;
+	min-height: 300px;
+}
+
+.notebook > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+.notebook > input:nth-of-type(2):checked ~ div:nth-of-type(2),
+.notebook > input:nth-of-type(3):checked ~ div:nth-of-type(3),
+.notebook > input:nth-of-type(4):checked ~ div:nth-of-type(4),
+.notebook > input:nth-of-type(5):checked ~ div:nth-of-type(5),
+.notebook > input:nth-of-type(6):checked ~ div:nth-of-type(6),
+.notebook > input:nth-of-type(7):checked ~ div:nth-of-type(7),
+.notebook > input:nth-of-type(8):checked ~ div:nth-of-type(8) {
+    display: block;
+}
+</style>
+</head>
+<body>
+<div class="mb-hide"></div>
+<div class="body-wrapper clearfix">
+    <div class="special-settings">
+        <div class="container special-panel-container">
+            <div class="content">
+                <div class="aa-block aaFontsize">
+                    <div class="fl-l">Размер:</div>
+                    <a class="aaFontsize-small" data-aa-fontsize="small" href="#" title="Уменьшенный размер шрифта">A</a><!--
+				 --><a class="aaFontsize-normal a-current" href="#" data-aa-fontsize="normal" title="Нормальный размер шрифта">A</a><!--
+				 --><a class="aaFontsize-big" data-aa-fontsize="big" href="#" title="Увеличенный размер шрифта">A</a>
+                </div>
+                <div class="aa-block aaColor">
+                    Цвет:
+                    <a class="aaColor-black a-current" data-aa-color="black" href="#" title="Черным по белому"><span>C</span></a><!--
+				 --><a class="aaColor-yellow" data-aa-color="yellow" href="#" title="Желтым по черному"><span>C</span></a><!--
+				 --><a class="aaColor-blue" data-aa-color="blue" href="#" title="Синим по голубому"><span>C</span></a>
+                </div>
+
+                <div class="aa-block aaImage">
+                    Изображения
+				<span class="aaImage-wrapper">
+					<a class="aaImage-on a-current" data-aa-image="on" href="#">Вкл.</a><!--
+					 --><a class="aaImage-off" data-aa-image="off" href="#">Выкл.</a>
+				</span>
+                </div>
+                <span class="aa-block"><a href="/ms/?set-aa=normal" data-aa-off><i class="icon icon-special-version"></i> Обычная версия сайта</a></span>
+            </div>
+        </div> <!-- .container special-panel-container -->
+    </div> <!-- .special-settings -->
+
+	<header>
+
+		<div class="container container-top-header">
+			<div class="content">
+				<div class="col col-mb-5 col-3 col-dt-2 col-ld-3">
+                    <!--'start_frame_cache_auth-area'-->                        <a class="top-header-link" href="/ms/auth/"><i class="fas fa-unlock"></i><span class="col-mb-hide col-hide lk-auth-dt">&nbsp;&nbsp;Личный кабинет</span></a>
+					    <!--'end_frame_cache_auth-area'-->				</div>
+				<div class="col col-mb-hide col-7 col-dt-8 col-ld-7">
+                				</div>
+				<div class="col col-mb-7 col-2 col-dt-2">
+					<div class="top-header-right-side">
+						<span class="aa-hide" itemprop="Copy"><a class="fl-r top-header-link ta-center" href="/ms/?set-aa=special" data-aa-on><i class="icon icon-special-version"></i></a></span>
+                                                					</div>
+				</div> <!-- .col col-mb-7 col-2 col-dt-2 -->
+			</div> <!-- .content -->
+		</div> <!-- .container container-top-header -->
+
+		<div class="container container-white pt30" style="padding-top: 15px;">
+			<div class="content">
+				<div class="col col-mb-12 col-dt-6 col-margin-bottom" style="margin-bottom: 0px; min-height: 100px; margin-right: 30px;">
+                    <a href="/ms/" class="logo">
+						<img src="/upload/coats/region/24.png" style="width: 70px;"/>
+                        <span style="line-height: 1.2; font-size: 18px; color: #ff0000; position: absolute; margin-left: 0px;margin-top: 0px;"><nobr>Мировая юстиция</nobr> <nobr>Красноярского края</nobr></span>
+<br><div style="position: absolute; margin-left: 85px;margin-top:-40px; font-size: 16px; line-height: 1.2; font-weight: 900;">
+Судебный участок <span style='font-weight: 700;'>№</span> 1<br><span style='font-size: 16px;'>в Абанском районе  </span></div>
+
+<!-- span style="line-height: 1.4; font-size: 10px; color: #828282; position: absolute; margin-left: 5px;margin-top:65px;">официальный сайт</span -->                    </a>
+				</div> <!-- .col col-mb-12 col-dt-6 col-margin-bottom -->
+				<div class="col col-mb-12 col-6 col-dt-3 mt10 col-margin-bottom" style="margin-bottom: 0px">
+					<br>663740, п. Абан, ул. Советская, 56&nbsp;<a href="/ms/o-sude/na-karte-mira/" title="Посмотреть расположение на карте"><img width="15" alt="Посмотреть расположение на карте" src="/images/balloon.jpg" height="20" title="Посмотреть расположение на карте" align="top"></a></b><br><small class="text-light">Адрес судебного участка</small>
+				</div> <!-- .col col-mb-12 col-6 col-dt-3 mt10 col-margin-bottom -->
+				<div class="col col-mb-12 col-6 col-dt-3 mt10 col-margin-bottom" style="margin-bottom: 0px; width: 20%;">
+                    <br>(391-63) 2-24-88</b><br><small class="text-light">Канцелярия</small>
+<div class="social-block" style="display:flex; width: 100px; align-items:center; line-height: 46px;">
+													<a href="https://vk.com/public217625011" target="_blank" style="margin-right: 5px;">
+					<div style="text-align: center;">
+						<img src="/bitrix/templates/gos_modern_red_s2/images/social_icon/vk.svg" alt="VK" title="Официальная страница ВКонтакте" style="vertical-align: middle; height: 24px;">
+					</div>
+				</a>
+						</div>				</div> <!-- .col col-mb-12 col-6 col-dt-3 mt10 col-margin-bottom -->
+			</div> <!-- .content -->
+		</div> <!-- .container container-white pt10 -->
+
+		<div class="container container-top-navigation">
+			<div class="content">
+				<div class="col col-mb-hide col-12">
+					<div class="top-nav-block">
+                            <ul>
+                                <li><a href="/ms/">Новости</a></li>
+                                                                <li class="parent">
+                    <a tabindex="1" href="/ms/o-sude/">О суде</a>
+                    <div class="second-level container">
+                        <div class="content">
+                            <div class="col col-mb-12">
+                                <div class="content">
+                                    <ul class="clearfix">
+                                                            <li><a href="/ms/o-sude/index.php">Общая информация</a></li>
+                                                <li><a href="/ms/o-sude/territorialnaya-yurisdiktsiya/">Территориальная юрисдикция</a></li>
+                                                <li><a href="/ms/o-sude/na-karte-mira/">На карте</a></li>
+                                                <li><a href="/ms/o-sude/istoricheskaya-spravka/">Историческая справка</a></li>
+                                                <li><a href="/ms/o-sude/sudebnaya-statistika/">Судебная статистика</a></li>
+                                                <li><a href="https://aodms.mirsud24.ru/agentstvo/administrirovanie-dokhodov/">Администрирование доходов (штрафы КоАП)</a></li>
+                                                <li><a href="https://aodms.mirsud24.ru/">Обеспечение деятельности</a></li>
+                                        </ul></div></div></div></div></li>
+                                            <li class="parent">
+                    <a tabindex="1" href="/ms/regulatory/">Справочная информация</a>
+                    <div class="second-level container">
+                        <div class="content">
+                            <div class="col col-mb-12">
+                                <div class="content">
+                                    <ul class="clearfix">
+                                                            <li><a href="/ms/regulatory/normativno-pravovye-akty/">Нормативные правовые акты</a></li>
+                                                <li><a href="/ms/regulatory/formy-dokumentov-pri-obrashchenii-k-mirovomu-sude/">Формы заявлений</a></li>
+                                                <li><a href="/ms/regulatory/appeals/">Порядок обжалования судебных актов</a></li>
+                                                <li><a href="/ms/regulatory/poryadok-oznakomleniya/">Порядок ознакомления с материалами дела</a></li>
+                                                <li><a href="/ms/regulatory/polnomochiya-suda">Полномочия суда</a></li>
+                                                <li><a href="/ms/regulatory/kalkulyator-gosposhliny/">Калькулятор госпошлины</a></li>
+                                                <li><a href="/ms/regulatory/sudebnye-primiriteli/">Судебные примирители</a></li>
+                                                <li><a href="/ms/regulatory/mediation/">Медиация</a></li>
+                                                <li><a href="/ms/regulatory/rekvizity-spets-litsevogo-scheta/">Реквизиты специального лицевого (депозитного) счета</a></li>
+                                        </ul></div></div></div></div></li>
+                                            <li class="parent">
+                    <a tabindex="1" href="/ms/sudoproizvodstvo/">Судопроизводство</a>
+                    <div class="second-level container">
+                        <div class="content">
+                            <div class="col col-mb-12">
+                                <div class="content">
+                                    <ul class="clearfix">
+                                                            <li><a href="/ms/sudoproizvodstvo/informatsiya-po-sudebnym-delam/">Информация по судебным делам</a></li>
+                                                <li><a href="/ms/sudoproizvodstvo/sudebnye-zasedaniya/">Судебные заседания</a></li>
+                                        </ul></div></div></div></div></li>
+                                            <li class="parent">
+                    <a tabindex="1" href="/ms/obrashcheniya-grazhdan/">Обращения</a>
+                    <div class="second-level container">
+                        <div class="content">
+                            <div class="col col-mb-12">
+                                <div class="content">
+                                    <ul class="clearfix">
+                                                            <li><a href="/ms/obrashcheniya-grazhdan/napravit-obrashchenie/">Направить обращение в суд</a></li>
+                                                <li><a href="/ms/obrashcheniya-grazhdan/vneprotsessualnye-obrashcheniya/">Внепроцессуальные обращения</a></li>
+                                        </ul></div></div></div></div></li>
+                                            <li class="parent">
+                    <a tabindex="1" href="/ms/sudebnye-uchastki/">Судебные участки</a>
+                    <div class="second-level container">
+                        <div class="content">
+                            <div class="col col-mb-12">
+                                <div class="content">
+                                    <ul class="clearfix">
+                                                            <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-etogo-rayona/">Судебные участки района</a></li>
+                                                <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-po-rayonam/index.php">Судебные участки по районам</a></li>
+                                                <li><a href="/ms/sudebnye-uchastki/spisok-sudebnykh-uchastkov/index.php">Список всех участков края</a></li>
+                                                <li><a href="/ms/sudebnye-uchastki/poisk-sudebnogo-uchastka-po-territorialnoy-yurisdiktsii/index.php">Поиск участка по территориальной юрисдикции</a></li>
+                                                <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-na-karte/">Судебные участки на карте</a></li>
+                                                <li><a href="https://sudrf.ru/index.php?id=300&amp;var=true#mp">Определение подсудности по заданному адресу (портал ГАС «Правосудие»)</a></li>
+                                </ul></div></div></div></div></li>
+        </ul>
+					</div> <!-- .top-nav-block -->
+									</div> <!-- .col col-mb-hide col-12 -->
+			</div>
+		</div> <!-- .container container-top-navigation -->
+	</header>
+
+
+	<div class="container container-main col-margin-top">
+		<div class="content">
+			<div class="col col-mb-12 col-9 col-margin-bottom">
+				<div class="content">
+
+
+															<div class="col col-mb-12 col-margin-bottom" style="margin-bottom: 10px;">
+							<h1></h1>
+						</div> <!-- .col col-mb-12 col-margin-bottom -->
+									</div> <!-- .content -->
+<div class="white-box padding-box "><script>
+	function printdiv() {
+		var newWin = window.open('', 'Print-Window');
+		newWin.document.open();
+		newWin.document.write('<html>');
+		newWin.document.write('<head><style type="text/css">');
+		newWin.document.write('table {border:  1px solid #000000;border-collapse:collapse;}');
+		newWin.document.write('th, td {padding-left: 5px;padding-right: 5px;text-align: left;font-size: 14px;vertical-align: top;border: 1px solid #000000;} th {background-color: #dcdcdc;} a {text-decoration:none;} span {font-size: 12px;}');
+
+		newWin.document.write('</style></head>');
+		newWin.document.write('<body onload="window.print();">');
+		/*newWin.document.write('<h1>Сервис находится в разработке</h1>');*/
+		newWin.document.write('<b>Основная информация по документу</b>');
+		var divToPrint = document.getElementById('part1');
+		newWin.document.write(divToPrint.innerHTML);
+		newWin.document.write('<br><b>Участники процесса</b>');
+		divToPrint = document.getElementById('part2');
+		newWin.document.write(divToPrint.innerHTML);
+		newWin.document.write('<br><b>Судебные заседания</b>');
+		divToPrint = document.getElementById('part3');
+		newWin.document.write(divToPrint.innerHTML);
+		newWin.document.write('<br><b>Документы</b>');
+		divToPrint = document.getElementById('part4');
+		newWin.document.write(divToPrint.innerHTML);
+		newWin.document.write('<br><b>Движение дела</b>');
+		divToPrint = document.getElementById('part5');
+		newWin.document.write(divToPrint.innerHTML);
+		divToPrint = document.getElementById('part6');
+		if (divToPrint) {
+			newWin.document.write(divToPrint.innerHTML);
+		}
+		divToPrint = document.getElementById('sitelink');
+		newWin.document.write(divToPrint.innerHTML);
+		/*var divToPrint=document.getElementById('part6');
+		newWin.document.write(divToPrint.innerHTML);*/
+		newWin.document.write('</body></html>');
+		newWin.document.close();
+		//setTimeout(function(){newWin.close();},10);
+	}
+
+	function show_doc(tguid, tsnum, mode) {
+		window.open('get_text.php?tguid=' + tguid + '&tsnum=' + tsnum + '&mode=' + mode/*,'','location=no'*/);
+	}
+</script>
+<style>
+@media (max-width: 992px) {
+	.qrcode_link {
+		display: none;
+	}
+}
+</style>
+<div class="content">
+    <div class="col col-mb-10 col-8">
+        <nobr>Информация по делу/материалу:</nobr> <nobr>13-0247/1/2024</nobr>
+    </div>
+    <div class="col col-mb-2 col-4" align="right">
+    		<a title="Печатать данные" href="javascript: printdiv();">
+			<img src="img/icon_print.png" height="32px" width="32px">
+		</a>
+		</div>
+    <div id="sitelink" style="display:none;">
+    	<span>https://ms1.mirsud24.ru/ms/sudoproizvodstvo/informatsiya-po-sudebnym-delam/detail_page.php?guid=CC8356A5-B15D-484B-B28A-3550D161A4EA</span>
+    </div>
+
+    <div class="col col-mb-12 col-12">
+		<div style="overflow-y: auto; width: 100%;">
+			<table width="100%">
+				<tr>
+					<td>
+						<div class="notebook">
+							<input type="radio" name="notebook1" id="notebook1_1" checked>
+							<label for="notebook1_1">Основное</label>
+							<input type="radio" name="notebook1" id="notebook1_2">
+							<label for="notebook1_2">Участники</label>
+							<input type="radio" name="notebook1" id="notebook1_3">
+							<label for="notebook1_3">Судебные заседания</label>
+							<input type="radio" name="notebook1" id="notebook1_4">
+							<label for="notebook1_4">Документы</label>
+							<input type="radio" name="notebook1" id="notebook1_5">
+							<label for="notebook1_5">Движение</label>
+
+							<div id="part1">
+								<br>
+								<table class="casecard" width="100%">
+									<tbody>
+										<tr>
+											<th align="right" width="20%">
+												№ заявления
+											</th>
+											<td>
+																							<a href="detail_page.php?guid="></a>
+											</td>
+											<td class="qrcode_link" style="width:130px; align: center;" rowspan="5">
+											<center>
+																										<img title="Ссылка на документ на сайте суда" style="width:129px;height:129px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBAQMAAADdbksTAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB+0lEQVRIiZ2VwY3EIAxFHXHgljSARBvcaGnSQJJpIGmJG21YooHkxgGN95PZ3et4F40i5Y0UjP/3h+hfy4vQI7iplivxKk1HHFk3Rp6F1kQPvOrIms0WypEYr7Poid9tG4McQn8hqBm7M9mmJ6h5FnlFt0T3e4pPBP1xc/7+/XTsI8Eym2U0ds3tR46PxEtuQ5Xd4oNmD6wj6L/s/bw81DbXpiPmZeUkOSOkd+NdjIY8kzmtSOI5+2dlHfFHLgKfBL8FGiPpCI3EjyhbcEMSqU5Huq8g/ZTcmvxRSUfMTuVl3SA0WpruUyiIWyysAhHNGWFR0hF/JP+KtHZnoktNR2iGdgIt0Cj8SzpiNugeCjxDlsegJSJlt7zmsuM1OiW5ahuQIbU8BUtJaIllC4ynVJrvUygIYgSzxhQaIkVudVTEmquXbbpVbNMRt1YerT+kXPWthYZACxoSZo2mbF6RdQQea1Pu8Yjne+IUBL5CeoPLEzV3LTQEE90elilyn537FBpCse8+5TaJW7pbVASZs/SsoyEjyVlJkFeryIYJCiJZSfp2Y4D/cd42fEfrR4I49VtsUARpjKeOwCFEuNEysg7G1hLcaBsuUFswqn3u1ATVQndMEDqsJiignBbXrr8qKQnuwSF1HfGdhVhH+j04YHbIn7G8s05B/rW+AOXQm9FTX+AGAAAAAElFTkSuQmCC">
+											</center>
+											</td>
+										</tr>
+										<tr>
+											<th align="right" width="20%">
+												№ дела
+											</th>
+											<td>
+												<a href="detail_page.php?guid=CC8356A5-B15D-484B-B28A-3550D161A4EA">13-0247/1/2024</a>
+											</td>
+										</tr>
+										</td></tr>										<tr>
+											<th align="right">
+												УИД
+											</th>
+											<td>
+												24MS0001-01-2022-001127-18											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Дата документа
+											</th>
+											<td>
+												29.03.2024											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Дата размещения
+											</th>
+											<td>
+												29.03.2024											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Судебный участок
+											</th>
+											<td colspan="2">
+												<a href='http://ms1.mirsud24.ru/ms/' target='_blank'>
+													1												</a>
+											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Судопроизводство
+											</th>
+											<td colspan="2">
+												Гражданское 											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Категория дела
+											</th>
+											<td colspan="2">
+												О выдаче дубликата судебного приказа											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Судья
+											</th>
+											<td colspan="2">
+												Стась Л.В.											</td>
+										</tr>
+										<tr>
+											<th align="right">
+												Текущее состояние
+											</th>
+											<td colspan="2">
+												Вступило в силу (18.05.2024)											</td>
+										</tr>
+																			</tbody>
+								</table>
+								<br>
+							</div>
+
+							<div id="part2" >
+															<br>
+								<table class="casecard" width="100%">
+									<tbody>
+										<tr>
+											<th align="center" width="7%">
+												№ п/п
+											</th>
+											<th align="center" width="25%">
+												Статус участника
+											</th>
+											<th>
+												Участник
+											</th>
+										</tr>
+										<tr><td align=center>1</td><td align=center>Взыскатель</td><td align=center>АО &quot;Тинькофф Банк&quot;</td></tr><tr><td align=center>2</td><td align=center>Должник</td><td align=center>Миндрина И.Ю.</td></tr><tr><td align=center>3</td><td align=center>Третье лицо</td><td align=center>ОСП по Абанскому району</td></tr>									</tbody>
+								</table>
+								<br>
+							</div>
+
+							<div id="part3" >
+								<br>
+								<table class="casecard" width="100%">
+									<tbody>
+										<tr>
+											<th align="center" width="5%">
+												№ п/п
+											</th>
+											<th align="center">
+												Дата и время
+											</th>
+											<th width="25%">
+												Место проведения
+											</th>
+											<th>
+												Зал заседания
+											</th>
+											<th>
+												Тип заседания
+											</th>
+											<th>
+												Результат
+											</th>
+											<th>
+												Дата
+												<br>
+												размещения
+											</th>
+										</tr>
+										<tr><td align=center>1</td><td align=center>22.04.2024<br>10:30</td><td align=center>Советская ул, д. 56, Абан п, Абанский р-н, Красноярский край</td><td align=center>1</td><td>Судебное заседание</td><td>Рассмотрение завершено</td><td align="center"> </td></tr>									</tbody>
+								</table>
+								<br>
+							</div>
+
+							<div id="part4" >
+								<br>
+																<table class="casecard" width="100%">
+									<tbody>
+										<tr>
+											<th align="center" width="7%">
+												№ п/п
+											</th>
+												<th align="center" width="11%">
+													Дата
+											</th>
+												<th>
+													Документ
+											</th>
+												<th>
+													Рег. номер
+											</th>
+												<th>
+													Текст
+											</th>
+																						<th align="center" width="11%">
+												Дата
+												<br>
+												размещения
+											</th>
+																					</tr>
+										<tr><td align=center>1</td><td align=center>22.04.2024</td><td align=left>Иное определение суда об изменении порядка исполнения решения</td><td align=center><td  align=center ></td><td align=center>&nbsp;</td></tr>									</tbody>
+								</table>
+								<br>
+						    </div>
+
+						    <div id="part5" >
+								<br>
+								<table class="casecard" width="100%">
+									<tbody>
+										<tr>
+											<th align="center" width="7%">
+												№ п/п
+											</th>
+												<th align="center" width="20%">
+													Дата
+											</th>
+												<th>
+													Состояние
+											</th>
+												<th>
+													Документ-основание
+											</th>
+										</tr>
+										<tr><td align=center>1</td><td align=center>29.03.2024</td><td align=center>Зарегистрировано</td><td align=center></td></tr><tr><td align=center>2</td><td align=center>22.04.2024</td><td align=center>Удовлетворено</td><td align=center>Иное определение суда об изменении порядка исполнения решения от 22.04.2024</td></tr><tr><td align=center>3</td><td align=center>18.05.2024</td><td align=center>Вступило в силу</td><td align=center>Иное определение суда об изменении порядка исполнения решения от 22.04.2024</td></tr>									</tbody>
+								</table>
+								<br>
+							</div>
+
+
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+                </div>            </div> <!-- .col col-mb-12 col-9 col-margin-bottom -->
+				<div class="col col-mb-12 col-3 col-margin-bottom">
+
+	    <div class="white-box col-margin primary-border-box clearfix">
+        <div class="sidebar-nav">
+            <ul>
+                                                                                <li class="current"><a href="/ms/sudoproizvodstvo/informatsiya-po-sudebnym-delam/">
+                                                                Информация по судебным делам                                            </a></li>
+                                                                                                                        <li><a href="/ms/sudoproizvodstvo/sudebnye-zasedaniya/">
+                                                                Судебные заседания                                            </a></li>
+                                                                                    </ul>
+        </div>
+    </div>
+
+					<div class="col-margin left-image-b-block">
+					<!--'start_frame_cache_y0XwfU'--><!--'end_frame_cache_y0XwfU'-->                    </div>
+					<!--'start_frame_cache_2DJmFo'-->    <a href="/ms/regulatory/kalkulyator-gosposhliny/" class="col-margin white-box padding-box ta-center d-b">
+        <img src="/upload/rk/681/681619ce1a5e1843bca54f1e914d6ceb.jpg" alt="Калькулятор госпошлины">
+        <b class="d-b text-primary">Калькулятор госпошлины</b>
+    </a>
+    <!--'end_frame_cache_2DJmFo'-->                        <div class="white-box padding-box">
+        <ul class="external-links-list">
+                            <li><a href="/ms/sudebnye-uchastki/">Судебные участки</a></li>
+                            <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-etogo-rayona/">Судебные участки района</a></li>
+                            <li><a href="https://aodms.mirsud24.ru/">Агентство по обеспечению деятельности мировых судей Красноярского края</a></li>
+                            <li><a href="https://www.mirsud24.ru">Мировая юстиция Красноярского края</a></li>
+                    </ul>
+    </div>
+                </div> <!-- .col col-mb-12 col-3 col-margin-bottom -->
+        </div> <!-- .content -->
+    </div> <!-- .container container-main col-margin-top -->
+
+</div> <!-- .body-wrapper clearfix -->
+
+<div class="footer-wrapper">
+	<footer class="container container-footer">
+
+
+    <div class="content footer-menu-content">
+                                                                                                                        <div class="col col-mb-12 col-4" style="width: 25%">
+                        <ul>
+                            <li class="col-margin-bottom">
+                                <div class="h4">О суде</div>
+                                    <ul>
+                                                                                                            <li><a href="/ms/o-sude/index.php">Общая информация</a></li>
+                                                                                                            <li><a href="/ms/o-sude/territorialnaya-yurisdiktsiya/">Территориальная юрисдикция</a></li>
+                                                                                                            <li><a href="/ms/o-sude/na-karte-mira/">На карте</a></li>
+                                                                                                            <li><a href="/ms/o-sude/istoricheskaya-spravka/">Историческая справка</a></li>
+                                                                                                            <li><a href="/ms/o-sude/sudebnaya-statistika/">Судебная статистика</a></li>
+                                                                                                            <li><a href="https://aodms.mirsud24.ru/agentstvo/administrirovanie-dokhodov/">Администрирование доходов (штрафы КоАП)</a></li>
+                                                                                                            <li><a href="https://aodms.mirsud24.ru/">Обеспечение деятельности</a></li>
+                                                                            </ul></li></ul></div>
+                                        <div class="col col-mb-12 col-4" style="width: 25%">
+                        <ul>
+                            <li class="col-margin-bottom">
+                                <div class="h4">Справочная информация</div>
+                                    <ul>
+                                                                                                            <li><a href="/ms/regulatory/normativno-pravovye-akty/">Нормативные правовые акты</a></li>
+                                                                                                            <li><a href="/ms/regulatory/formy-dokumentov-pri-obrashchenii-k-mirovomu-sude/">Формы заявлений</a></li>
+                                                                                                            <li><a href="/ms/regulatory/appeals/">Порядок обжалования судебных актов</a></li>
+                                                                                                            <li><a href="/ms/regulatory/poryadok-oznakomleniya/">Порядок ознакомления с материалами дела</a></li>
+                                                                                                            <li><a href="/ms/regulatory/polnomochiya-suda">Полномочия суда</a></li>
+                                                                                                            <li><a href="/ms/regulatory/kalkulyator-gosposhliny/">Калькулятор госпошлины</a></li>
+                                                                                                            <li><a href="/ms/regulatory/sudebnye-primiriteli/">Судебные примирители</a></li>
+                                                                                                            <li><a href="/ms/regulatory/mediation/">Медиация</a></li>
+                                                                                                            <li><a href="/ms/regulatory/rekvizity-spets-litsevogo-scheta/">Реквизиты специального лицевого (депозитного) счета</a></li>
+                                                                            </ul></li></ul></div>
+                                        <div class="col col-mb-12 col-4" style="width: 25%">
+                        <ul>
+                            <li class="col-margin-bottom">
+                                <div class="h4">Судопроизводство</div>
+                                    <ul>
+                                                                                                            <li><a href="/ms/sudoproizvodstvo/informatsiya-po-sudebnym-delam/">Информация по судебным делам</a></li>
+                                                                                                            <li><a href="/ms/sudoproizvodstvo/sudebnye-zasedaniya/">Судебные заседания</a></li>
+                                                                            </ul></li></ul></div>
+                                        <div class="col col-mb-12 col-4" style="width: 25%">
+                        <ul>
+                            <li class="col-margin-bottom">
+                                <div class="h4">Обращения</div>
+                                    <ul>
+                                                                                                            <li><a href="/ms/obrashcheniya-grazhdan/napravit-obrashchenie/">Направить обращение в суд</a></li>
+                                                                                                            <li><a href="/ms/obrashcheniya-grazhdan/vneprotsessualnye-obrashcheniya/">Внепроцессуальные обращения</a></li>
+                                                                            </ul></li></ul></div>
+                                        <div class="col col-mb-12 col-4" style="width: 25%">
+                        <ul>
+                            <li class="col-margin-bottom">
+                                <div class="h4">Судебные участки</div>
+                                    <ul>
+                                                                                                            <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-etogo-rayona/">Судебные участки района</a></li>
+                                                                                                            <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-po-rayonam/index.php">Судебные участки по районам</a></li>
+                                                                                                            <li><a href="/ms/sudebnye-uchastki/spisok-sudebnykh-uchastkov/index.php">Список всех участков края</a></li>
+                                                                                                            <li><a href="/ms/sudebnye-uchastki/poisk-sudebnogo-uchastka-po-territorialnoy-yurisdiktsii/index.php">Поиск участка по территориальной юрисдикции</a></li>
+                                                                                                            <li><a href="/ms/sudebnye-uchastki/sudebnye-uchastki-na-karte/">Судебные участки на карте</a></li>
+                                                                    </ul></li></ul></div>
+            </div>
+
+		<div class="content">
+			<div class="col col-mb-12 col-4">
+				<!-- &copy; -->
+				Судебный участок № 1 в Абанском районе<br>
+				<!-- a href="/ms/contacts/">Контакты</a -->
+			</div> <!-- .col col-mb-12 col-4 -->
+
+			<div class="col col-mb-12 col-4">
+				663740, п. Абан, ул. Советская, 56			</div> <!-- .col col-mb-12 col-4 -->
+
+			<div class="col col-mb-12 col-4">
+								<div id="bx-composite-banner"></div>
+			</div> <!-- .col col-mb-12 col-4 -->а
+		</div>
+	</footer>
+</div> <!-- .footer-wrapper -->
+
+<!--'start_frame_cache_auth-area-bottom'--><div class="mobile-nav-wrapper">
+    <div class="mobile-nav">
+        <div class="content p20 pb0">
+	        		        <div class="col col-mb-8 pl0">
+			        <a class="btn btn-square btn-dark btn-block" href="/ms/auth/"><i class="icon icon-lk"></i> Авторизация</a>
+		        </div>
+			        </div>
+    </div>
+</div>
+<!--'end_frame_cache_auth-area-bottom'-->
+</body>
+</html>
